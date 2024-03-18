@@ -107,7 +107,7 @@ public static int optimizedpower(int a, int n){
         // System.out.println(" fibonacci th no:"+fib(n));
         // int arr[] = {2,3,4,5,1};                       //sorted
         // System.out.println(isSorted(arr,0));
-        // int arr[] = {2,3,4,5,3,4,57,4,8,1,57};                 //first occurance           //sorted
+        // int arr[] = {2,3,4,5,3,4,57,4,8,1,57};                 //first occurance    
         // System.out.println(lastOcc(arr,57,0));
         // System.out.println(lastOcc(arr,57,arr.length -1));   //lasr occ
         //  System.out.println(power(2,10));   //lx^n
