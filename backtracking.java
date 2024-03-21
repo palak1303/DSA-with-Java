@@ -68,7 +68,7 @@ public class backtracking {
                 return false;
             }
         }
-        for(int i = row-1,j=col-1; i>=0&&j>=0;i--,j--){
+        for(int i = row-1,j=col+1; i>=0&&j<board.length;i--,j++){
             if(board[i][j] == 'Q'){
                 return false;
             }
@@ -86,12 +86,10 @@ public class backtracking {
         if(isSafe(board,row,j)){
             board[row][j] = 'Q';
             nQueen(board,row+1);
-            board[row][j] = '-';
+            board[row][j] = '.';
 
         }
-        board[row][j] = 'Q';
-        nQueen(board,row+1);
-        board[row][j] = '.';
+        
     
     }
 
@@ -117,12 +115,12 @@ public static void printBoard(char board[][]) {
         // changeArr(arr,0,1);
         // printArr(arr);
 
-        int n= 2;
+        int n= 4;
         char board[][] = new char[n][n];
         //intailise
         for( int i = 0; i< n;i++){
             for(int j=0;j<n;j++){
-                board[i][j]= '-';
+                board[i][j]= '.';
 
             }
 
