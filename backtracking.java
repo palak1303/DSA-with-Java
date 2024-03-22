@@ -47,7 +47,7 @@ public class backtracking {
     //         //recursion
     //         for(int i = 0; i< str.length();i++){
     //             char curr = str.charAt(i);
-    //             //"abcde" = "ab"+ de = abde ,c delete
+    //             //"abcde" = "ab"+ de = abde //c delete
     //             String Newstr  = str.substring(0,i) + str.substring(i+1);
     //             permutation(Newstr,ans+curr);
     //         }
@@ -63,36 +63,52 @@ public class backtracking {
             }
         }
         //diag left up
-        for(int i = row-1, j=col-1;i>=0&& j>=0; i--,j--){
+        for(int i = row-1, j=col-1; i>=0 && j>=0; i--,j--){
             if(board[i][j] == 'Q'){
                 return false;
             }
         }
-        for(int i = row-1,j=col+1; i>=0&&j<board.length;i--,j++){
+        for(int i = row-1,j=col+1; i>=0 && j<board.length;i--,j++){
             if(board[i][j] == 'Q'){
                 return false;
             }
         }
         return true;
     }
-    public static void nQueen(char board[][],int row){   
-        // /base
-        if(row ==board.length){
-            printBoard(board);
-            return;
-        }
+    // public static void nQueen(char board[][],int row){   
+    //     // /base
+    //     if(row == board.length){
+    //         // printBoard(board);
+    //         count++;
+    //         return;
+    //     }
         //column loop
-     for( int j=0;j<board.length;j++){
+    //  for( int j=0;j<board.length;j++){
+    //     if(isSafe(board,row,j)){
+    //         board[row][j] = 'Q';
+    //         nQueen(board,row+1);
+    //         board[row][j] = '.';
+
+    //     }
+
+    //optimized for 1 soln
+    public static boolean nQueen(char board[][],int row){   
+        // /base
+        if(row == board.length){
+            // printBoard(board);
+            count++;
+            return true;
+        }
+    for( int j=0;j<board.length;j++){
         if(isSafe(board,row,j)){
             board[row][j] = 'Q';
-            nQueen(board,row+1);
-            board[row][j] = '.';
-
+            if(nQueen(board,row+1)){
+             return true;
+            }
+            board[row][j] = 'x';
         }
-        
-    
     }
-
+    return false;
 }
 public static void printBoard(char board[][]) {
     System.err.println("---------chess board-------");
@@ -101,10 +117,13 @@ public static void printBoard(char board[][]) {
             System.out.print(board[i][j] + " ");
         }
         System.out.println();
+
     }
     
 }
-    
+
+
+static int count = 0;    
     // 
     public static void main(String[] args) {
         // String str = "abc"; //permuation
@@ -115,7 +134,7 @@ public static void printBoard(char board[][]) {
         // changeArr(arr,0,1);
         // printArr(arr);
 
-        int n= 4;
+        int n= 8;
         char board[][] = new char[n][n];
         //intailise
         for( int i = 0; i< n;i++){
@@ -125,6 +144,13 @@ public static void printBoard(char board[][]) {
             }
 
         }
-        nQueen(board,0);
+        // nQueen(board,0);   //simple nQueen
+        // System.out.println(count);     //count
+        if( nQueen(board,0)){          //optimized for 1solution only
+            System.out.println("solution is possible");
+            printBoard(board);
+        }else{
+            System.out.println("Solution is not possible");
+        }
     }
 }
