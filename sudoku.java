@@ -48,8 +48,12 @@ public class sudoku {
                 if(sudokuSolver(sudoku,nextRow,nextCol)){    //soln exist
                     return true;
                 }
+<<<<<<< HEAD
                 sudoku[row][col]= 0;
             }
+=======
+                sudoku[row][col] =0;            }
+>>>>>>> 276ee1fc7cc733f2f77d0206935e3b851771eba2
         }
         return false;
     }
@@ -64,6 +68,7 @@ public class sudoku {
    
     public static void main(String args[]){
         int sudoku[][] = {
+<<<<<<< HEAD
              {3, 0, 6, 5, 0, 8, 4, 0, 0},
             {5, 2, 0, 0, 0, 0, 0, 0, 0},
             {0, 8, 7, 0, 0, 0, 0, 3, 1},
@@ -73,6 +78,17 @@ public class sudoku {
             {1, 3, 0, 0, 0, 0, 2, 5, 0},
             {0, 0, 0, 0, 0, 0, 0, 7, 4},
             {0, 0, 5, 2, 0, 6, 3, 0, 0} };
+=======
+   {3, 0, 6, 5, 0, 8, 4, 0, 0},
+{5, 2, 0, 0, 0, 0, 0, 0, 0},
+{0, 8, 7, 0, 0, 0, 0, 3, 1},
+{0, 0, 3, 0, 1, 0, 0, 8, 0},
+{9, 0, 0, 8, 6, 3, 0, 0, 5},
+{0, 5, 0, 0, 9, 0, 6, 0, 0}, 
+{1, 3, 0, 0, 0, 0, 2, 5, 0},
+{0, 0, 0, 0, 0, 0, 0, 7, 4},
+{0, 0, 5, 2, 0, 6, 3, 0, 0}  };
+>>>>>>> 276ee1fc7cc733f2f77d0206935e3b851771eba2
 
     if(sudokuSolver(sudoku,0,0)){
         System.out.print("solution exist");
