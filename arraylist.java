@@ -9,7 +9,7 @@ public class arraylist{
         // ArrayList<Boolean> list3  = new ArrayList<>();
     
         //  // add 
-        // list.add(1);   //0(1)
+        // list.add(1);      //0(1)
         // list.add(22);
         // list.add(31);
         // list.add(14);
