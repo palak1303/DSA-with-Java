@@ -166,7 +166,7 @@ public static String toUpperCase(String str){
 public static void main(String args[]){
     String str = " hi, i am palak";
     System.out.println(toUpperCase(str));
-    System.out.print(str.)
+    System.out.print(str);
 }
 
 
