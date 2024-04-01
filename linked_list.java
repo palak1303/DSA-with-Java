@@ -70,8 +70,6 @@ public void addMid(int idx,int data){
     temp.next = newNode;
 
 }
-
-
 public void print(){
     if(head == null){
         System.out.println(" LL is empty");
@@ -83,6 +81,8 @@ while(temp != null){
 }
 System.out.println("null");
 }
+
+
 // method - remove First 
 public void removeFirst(){
     int val ;
