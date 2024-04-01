@@ -137,6 +137,48 @@ public node mergeSort( node head){
 }
 
 
+//Zig Zag
+
+public void zigZag(){
+    //find mid
+     node slow = head;
+     node fast = head.next;
+     while(fast != null && fast.next != null){
+    slow = slow.next;
+    fast = fast.next.next;
+     }
+     node mid = slow;
+
+//reverse 2nd hald 
+ node curr = mid.next;
+ mid.next = null;
+ node prev = null ;
+ node next;
+ while( curr != null){
+    next = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = next;
+ }
+
+ node left = head;
+ node right = prev;
+ node nextl,nextr;
+
+ //all merge 
+ while( left != null&& right != null){
+    nextl = left.next;
+    left.next = right;
+    nextr = right.next;
+    right.next = nextl;
+
+    left = nextl;
+    right = nextr;
+
+ }
+}
+
+
     public static void main(String[] args) {
         linked_list2 l1 = new linked_list2();
         l1.addfirst(1);
@@ -145,8 +187,11 @@ public node mergeSort( node head){
         l1.addfirst(4);
         l1.addfirst(5);
         l1.printlinklist();
-        l1.head = l1.mergeSort(l1.head);
+        // l1.head = l1.mergeSort(l1.head);
         l1.printlinklist();
+        l1.zigZag();
+        l1.printlinklist();
+
 
 
         // head = new node(1);
