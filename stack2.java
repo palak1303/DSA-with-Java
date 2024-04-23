@@ -11,6 +11,7 @@ public class stack2 {
 //         s.push(top);
 //     }
 
+
 //     // ques2  reverse the string
 //     public static String reverseString( String str){
 //         Stack<Character> s = new Stack<>();
@@ -28,6 +29,7 @@ public class stack2 {
 //         return result.toString();
 //     }
 
+
 //     // ques3  reverse the stack
 //     public static void  reverseStack(Stack<Integer> s){
 //         if( s.isEmpty()){
@@ -42,6 +44,8 @@ public class stack2 {
 //         System.out.println(s.pop());
 //     }
 // }
+
+
 // // ques 3 stock span 
 // public static void stockSpan( int stocks[], int span[]){
 //     Stack<Integer> s = new Stack<>();
@@ -107,7 +111,7 @@ public static void main(String[] args) {
     Stack<Integer> s = new Stack<>();
     int nxtGreater[] = new int[arr.length];
 
-    for( int i = arr.length -1;i>=0;i--){
+    for( int i = arr.length -1; i>=0; i--){
         //while
         while(!s.isEmpty() && arr[s.peek()]<=arr[i]){
             s.pop();

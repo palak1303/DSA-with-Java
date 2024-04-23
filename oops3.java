@@ -37,7 +37,14 @@
 
 // }
 // }
-//          interface
+
+//          INTERFACE
+     // to multiple multiple inheritance(multiplr a , b -> c)
+    // total abstraction
+    // all methods are public , static ,and without imlplementation, 
+    //variable are final, staic and public
+        
+
 // interface ChessPlayer{
 //     void moves();
 

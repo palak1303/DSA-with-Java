@@ -126,6 +126,7 @@ public class oops2 {
     // }
     
     // //  constructor 
+    
     // class Student{
     //     String name;
     //     int roll;
