@@ -15,8 +15,8 @@ public class greedyALg1 {
             activities[i][0] = i;
             activities[i][1] = start[i];
             activities[i][2] = end[i];
-
          }
+         
         //  Lamba funnc
          Arrays.sort(activities, Comparator.comparingDouble(o -> o[2]));
 
