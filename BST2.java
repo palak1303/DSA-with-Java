@@ -6,6 +6,7 @@ public class BST2 {
         Node right;
         Node(int data){
             this.data = data;
+            this
         }
     }
     public static Node insert(Node root, int val){
@@ -67,8 +68,26 @@ public class BST2 {
         path.remove(path.size() -1);
 
         }
+        // is valid Bst
+        public static boolean isValid(Node root ,Node min, Node max){
+            if(root == null){
+                return true;
+            }
+            if(min != null && root.data <= min.data){
+                return false;
+            }
+            if(max!= null && root.data >= max.data){
+                return false;
+            }
+            return isValid(root.left, min , root)
+                   && isValid(root.right, root,max);
+        }
 
-    
+        // Mirror a BST
+
+
+
+
     public static void main(String args[]){
         int values[] = {8,5,3,1,4,6,10,11,14};
         Node root = null;
@@ -81,5 +100,14 @@ public class BST2 {
 
         // printInRange(root,5,12);
         pathRoot2Leaf(root,new ArrayList<>());
+
+
+        if(isValid(root,null,null)){
+            System.out.println("valid");
+        }else{
+            System.out.println("not vliad");
+        }
+
+
     }
 }
