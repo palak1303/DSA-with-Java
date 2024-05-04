@@ -6,7 +6,6 @@ public class BST2 {
         Node right;
         Node(int data){
             this.data = data;
-            this
         }
     }
     public static Node insert(Node root, int val){
@@ -83,8 +82,6 @@ public class BST2 {
                    && isValid(root.right, root,max);
         }
 
-        // Mirror a BST
-
 
 
 
@@ -107,7 +104,5 @@ public class BST2 {
         }else{
             System.out.println("not vliad");
         }
-
-
     }
 }
