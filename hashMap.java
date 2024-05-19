@@ -1,5 +1,7 @@
 import  java.util.*;
 
+//most O(1)
+//O(n) worst case
 public class hashMap {
     static class HashMap<K,V>{    //generic
         private class Node{
@@ -34,7 +36,7 @@ public class hashMap {
                     return di;
                 }
                 di++;
-
+                
             }
             return -1;
         }
