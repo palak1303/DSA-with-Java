@@ -20,6 +20,7 @@ public class hashSet {
         // while( it.hasNext()){
         //     System.out.println(it.next());
         // }
+        
             // Advanced loop
         // for(String city : cities){
         //     System.out.println(city);
