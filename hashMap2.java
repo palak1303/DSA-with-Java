@@ -9,6 +9,7 @@ public class hashMap2 {
         lhm.put("China",150);
         lhm.put("US",50);
 
+
         // tree hashmap(R) O(logn)     --> aplhabetical order
         TreeMap<String, Integer> tm = new TreeMap<>();
         tm.put("India",100);
@@ -24,6 +25,7 @@ public class hashMap2 {
         System.out.println(lhm);
         System.out.println(hm);
         System.out.println(tm);
+        
 
     }
     
