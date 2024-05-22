@@ -89,8 +89,8 @@ public class BST1 {
             root = insert(root,values[i]);
         }
 
-        // inorder(root);
-        // System.out.println();
+        inorder(root);
+        System.out.println();
 
 
         // System.out.println(search(root,8));
