@@ -41,9 +41,16 @@ public class graph2 {
         graph[6].add(new Edge(6,5,1));
 }
     // BFS
-    public static void bfs(ArrayList<Edge>[] graph){   //O(V+E)  ||O(V^2)(MAtrix)
+    public static void bfs(ArrayList<Edge>[] graph){
+        boolean vis[] = new boolean[graph.length];
+        for( int i=0; i<graph.length;i++){
+            if(!vis[i]){
+                bfsUtil(graph , vis);
+            }
+        }
+    }
+    public static void bfsUtil(ArrayList<Edge>[] graph,boolean vis[]){   //O(V+E)  ||O(V^2)(MAtrix)
         Queue<Integer> q = new LinkedList();
-        boolean vis[] = new boolean[graph.length]; 
         q.add(0);  //source
 
         while( !q.isEmpty()){
@@ -60,14 +67,20 @@ public class graph2 {
         }
     }
     // DFS
-    public static  void dfs(ArrayList<Edge>[] graph, int curr, boolean vis[]){   //O(V+E)
+    public static void dfs(ArrayList<Edge>[] graph){
+        boolean vis[] = new boolean[graph.length];
+        for( int i =0; i<graph.length;i++){
+            dfsUtil(graph, i , vis);
+        }
+    }
+    public static  void dfsUtil(ArrayList<Edge>[] graph, int curr, boolean vis[]){   //O(V+E)
         System.out.print(curr +" ");
         vis[curr] = true;
 
         for( int i = 0; i < graph[curr].size();i++){
             Edge e = graph[curr].get(i);
             if(!vis[e.dest]){
-                dfs(graph, e.dest,vis);
+                dfsUtil(graph, e.dest,vis);
             }
         }
     }
