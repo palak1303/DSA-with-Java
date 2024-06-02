@@ -38,7 +38,7 @@ public class rotatedsorredarr {
     }
     public static void main(String[] args) {
         int arr[]={4,5,6,7,0,1,2};
-        System.out.println(search(arr,3)); 
+        System.out.println(search(arr,4)); 
     }
     
 }

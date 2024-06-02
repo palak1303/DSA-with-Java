@@ -56,7 +56,7 @@ public class binaryTree3 {
    }
     public static void topView ( Node root){
     // level order
-        Queue<Info> q = new LinkedList<>();
+        pQueue<Info> q = new LinkedList<>();
         HashMap< Integer, Node> map = new HashMap<>();
 
         int min = 0 , max = 0;

@@ -65,7 +65,7 @@ public class binaryTree1 {
             return;
 
         }
-        Queue<Node> q = new LinkedList<>();
+        pQueue<Node> q = new LinkedList<>();
         q.add(root);
         q.add(null);
 

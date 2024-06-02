@@ -57,7 +57,7 @@ public class queueQ1 {
     //     }
         public static void main(String[] args) {
             // Queue q= new Queue();
-            Queue<Integer> q = new LinkedList<>();   //arrayDeque( queue is a interfenec j bs that why onj ni banate)
+            pQueue<Integer> q = new LinkedList<>();   //arrayDeque( queue is a interfenec j bs that why onj ni banate)
             q.add(1);
             q.add(2);
             q.add(3);
