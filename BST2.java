@@ -30,7 +30,7 @@ public class BST2 {
         System.out.print(root.data + " ");
         inorder(root.right);
     }
-    
+    //print in range
     public static void printInRange(Node root,int k1, int k2){
         if(root == null){
             return;
