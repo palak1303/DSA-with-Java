@@ -13,7 +13,7 @@ public class graph12 {
 
         }
         @Override
-        public int compareTo(Edge e2){
+        public int compareTo( Edge e2){
             return this.wt - e2.wt;
         }
     }
