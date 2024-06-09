@@ -30,7 +30,7 @@ public class BST2 {
         System.out.print(root.data + " ");
         inorder(root.right);
     }
-    //print in range
+    //Ques 1-->print in range
     public static void printInRange(Node root,int k1, int k2){
         if(root == null){
             return;
@@ -48,12 +48,12 @@ public class BST2 {
         }
     }
 
-    // root to leaf path
+    //Ques 2-> root to leaf path
     public static void printPath(ArrayList<Integer>path){
         for(int i = 0 ; i< path.size() ;i++){
             System.out.print(path.get(i) + " ->");
         }
-        System.out.println("Null");
+        System.out.println("Nulll");
     }
     public static void pathRoot2Leaf(Node root , ArrayList<Integer>path){
         if(root == null){
@@ -68,19 +68,19 @@ public class BST2 {
         path.remove(path.size() -1);
 
         }
-        // is valid Bst
-        public static boolean isValid(Node root ,Node min, Node max){
-            if(root == null){
-                return true;
-            }
-            if(min != null && root.data <= min.data){
+    // is valid Bst
+    public static boolean isValid(Node root ,Node min, Node max){
+        if(root == null){
+            return true;
+        }
+        if(min != null && root.data <= min.data){
                 return false;
-            }
-            if(max!= null && root.data >= max.data){
-                return false;
-            }
-            return isValid(root.left, min , root)
-                   && isValid(root.right, root,max);
+        }
+        if(max!= null && root.data >= max.data){
+            return false;
+        }
+        return isValid(root.left, min , root)
+           && isValid(root.right, root,max);
         }
 
 
@@ -89,6 +89,7 @@ public class BST2 {
     public static void main(String args[]){
         int values[] = {8,5,3,1,4,6,10,11,14};
         Node root = null;
+
         for( int i = 0 ;i<values.length;i++){
             root = insert(root,values[i]);
         }
@@ -98,8 +99,6 @@ public class BST2 {
 
         // printInRange(root,5,12);
         pathRoot2Leaf(root,new ArrayList<>());
-
-
         if(isValid(root,null,null)){
             System.out.println("valid");
         }else{
