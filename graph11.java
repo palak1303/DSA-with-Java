@@ -1,5 +1,6 @@
 import java.util.*;
 // Disjiont set DS 
+// ?updated
 public class graph11 {
     static int n = 7;
     static int par[] = new int[n];
@@ -18,10 +19,10 @@ public class graph11 {
         return par[x] =  find(par[x]);
     }
 
-    public static void union(int a, int b){    //o(1)
+    public static void union(int a, int b){    //O(1)
         int parA = find(a);
         int parB = find(b);
-
+        
         if( rank[parA] == rank[parB]){
             par[parB] = parA;
             rank[parA] ++;
@@ -46,3 +47,4 @@ public class graph11 {
 
     }
 }
+
