@@ -99,15 +99,12 @@ public class binaryTree1 {
     BinaryTree tree = new BinaryTree();
     Node root = tree.buildTree(nodes);
     // System.out.println(root.data);
-
     // tree.preOrder(root);
     // System.out.println();
     // tree.inOrder(root);
     // System.out.println();
     // tree.postOrder(root);
-     // System.out.println();
+    // System.out.println();
     tree.levelOrder(root);
-
-
- }
+    }
 }
