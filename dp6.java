@@ -31,7 +31,6 @@ public class dp6 {
     }
     return ans;
 }
-
 // Longest Increasing substring O(n*m)
 public static int lcs( int arr[],int arr2[]){
     int n = arr.length;
