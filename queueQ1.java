@@ -1,33 +1,33 @@
 import java.util.*;
 public class queueQ1 {
     //microsoft -O(1)
-    // public class Node {
-    //         static int data;
-    //         Node next;
+    public class Node {
+            static int data;
+            Node next;
             
-    //         Node ( int data){
-    //             this.data = data;
-    //             this.next = null;
-    //         }
-    //     }    
-    //     static class Queue{
-    //     static Node head = null;
-    //     static Node tail = null;
+            Node ( int data){
+                this.data = data;
+                this.next = null;
+            }
+        }    
+        static class Queue{
+        static Node head = null;
+        static Node tail = null;
 
-    //         public boolean isEmpty(){
-    //             return head == null && tail == null;
-    //         }
+            public boolean isEmpty(){
+                return head == null && tail == null;
+            }
 
-    //         //add
-    //         public void add(int data){
-    //             Node newNode=  new Node(data);
-    //             if( head == null){
-    //                 head = tail = newNode;
-    //                 return;
-    //             }
-    //             tail.next = newNode;
-    //             tail = newNode;
-    //         }
+            //add
+            // public void add(int data){
+            //     Node newNode=  new Node(data);
+            //     if( head == null){
+            //         head = tail = newNode;
+            //         return;
+            //     }
+            //     tail.next = newNode;
+            //     tail = newNode;
+            // }
             
     //         //remove
     //         public int remove(){
@@ -54,7 +54,7 @@ public class queueQ1 {
     //             return head.data;
     //         }
     
-    //     }
+        }
         public static void main(String[] args) {
             // Queue q= new Queue();
             pQueue<Integer> q = new LinkedList<>();   //arrayDeque( queue is a interfenec j bs that why onj ni banate)
