@@ -17,6 +17,7 @@ public class dp10 {
         }
         return ans;
     }
+    
     // memorization
     public static int memmcm(int arr[], int i , int j,int dp[][]){
         if( i==j){
