@@ -84,6 +84,8 @@ public class dp10 {
             Arrays.fill(dp[i],-1);
         }
         System.out.println(memmcm(arr,1,n-1,dp));
+
+        
         System.out.println(tabmcm(arr));
 
 
